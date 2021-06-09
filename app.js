@@ -11,8 +11,7 @@ app.use(express.static('public'))
 const restaurantsList = require('./restaurant.json')
 
 
-app.get('/', (req, res) =>{
-    
+app.get('/', (req, res) => {
     res.render('index', {restaurants: restaurantsList.results})
 })
 
@@ -30,6 +29,6 @@ app.get('/search', (req, res) => {
 })
 
 
-app.listen(port, ()=>{
-    console.log(`Express is listening onhttp://localhost:${port}`)
+app.listen(port, () => {
+    console.log(`Express is listening on http://localhost:${port}`)
 })
